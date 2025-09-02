@@ -1211,13 +1211,3 @@ t.setSettings.one = t.setSettings.one || function() {};
     });
   })();
 })();
-// 페이지 로드 완료 시 프리로더 숨기기
-window.addEventListener("load", function() {
-    const preloader = document.getElementById("preloader");
-    if (preloader) {
-        preloader.classList.add("loaded"); // app.css에서 transition 적용됨
-        setTimeout(() => {
-            preloader.style.display = "none"; // 완전히 제거
-        }, 1000); // transition 시간과 맞춤
-    }
-});
