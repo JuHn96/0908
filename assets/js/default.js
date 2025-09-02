@@ -126,28 +126,21 @@
     );
   }
   const i = n(
-    n({}, t),
-    {},
-    {
-      siteUrl: "https://www.templatemonster.com/",
-      settings: {
-        tm: {
-          cookieDomain: ".templatemonster.com",
-          setSettingsFunc: t.setSettings.tm,
-        },
-        blog: {
-          cookieDomain: ".monsterspost.com",
-          setSettingsFunc: t.setSettings.tm,
-        },
-        one: {
-          cookieDomain: ".monsterone.com",
-          setSettingsFunc: t.setSettings.one,
-        },
-      },
-      serviceUsers: "//users.templatemonster.com/api/v1/",
-      serviceGeo: "//api.templatemonster.com/geo/v1/",
-    }
-  );
+  n({}, t),
+  {},
+  {
+    siteUrl: "",       // 빈 문자열로 대체
+    settings: {},      // 빈 객체로 설정
+    serviceUsers: "",  // 사용 안 함
+    serviceGeo: ""     // 사용 안 함
+  }
+);
+
+// 만약 다른 코드에서 t.setSettings.tm 같은 함수 호출이 있으면
+// 아래처럼 빈 함수로 정의해두면 오류 방지 가능
+if (!t.setSettings) t.setSettings = {};
+t.setSettings.tm = t.setSettings.tm || function() {};
+t.setSettings.one = t.setSettings.one || function() {};
   function a(t) {
     return (
       (a =
@@ -1218,3 +1211,13 @@
     });
   })();
 })();
+// 페이지 로드 완료 시 프리로더 숨기기
+window.addEventListener("load", function() {
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+        preloader.classList.add("loaded"); // app.css에서 transition 적용됨
+        setTimeout(() => {
+            preloader.style.display = "none"; // 완전히 제거
+        }, 1000); // transition 시간과 맞춤
+    }
+});

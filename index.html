@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>JH's Life Log~</title>
-    <meta name="description" content="JuHwan's Life Log" />
+  <title>JH's Life Log~</title>
+  <meta name="description" content="JuHwan's Life Log" />
 
-    <!-- 소셜 공유용 Open Graph / Twitter 카드 -->
-    <meta property="og:title" content="JuHwan's Life Log" />
-    <meta property="og:description" content="JuHwan's Life Log" />
-    <meta property="og:image" content="assets/images/logo.png" />
+  <!-- 소셜 공유용 Open Graph / Twitter 카드 -->
+  <meta property="og:title" content="JuHwan's Life Log" />
+  <meta property="og:description" content="JuHwan's Life Log" />
+  <meta property="og:image" content="assets/images/logo.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="JuHwan's Life Log" />
-    <meta name="twitter:description" content="JuHwan's Life Log" />
-    <meta name="twitter:image" content="assets/images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JuHwan's Life Log" />
+  <meta name="twitter:description" content="JuHwan's Life Log" />
+  <meta name="twitter:image" content="assets/images/logo.png" />
 
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/images/logo.png"
-      sizes="32x32"
-    />
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/images/logo.png"
+    sizes="32x32"
+  />
 
-    <!-- 로컬 JS/CSS -->
-    <script src="assets/js/default.js" defer></script>
-    <link rel="stylesheet" href="assets/css/demo.css" />
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/vendor/font-awesome.css" />
+  <link rel="stylesheet" href="assets/css/vendor/slick.css" />
+  <link rel="stylesheet" href="assets/css/vendor/slick-theme.css" />
+  <link rel="stylesheet" href="assets/css/vendor/classic.date.css" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "WebPage",
-        "name": "JH's Life Log",
-        "url": "https://yourdomain.com/",
-        "description": "주환의 개인 라이프 로그, 기록과 생각을 담는 공간"
-      }
-    </script>
-  </head>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="assets/css/demo.css" />
 
-  <body>
+  <!-- 로컬 JS -->
+  <script src="assets/js/default.js" defer></script>
+  <script src="assets/js/app-config.js" defer></script>
+  <script src="assets/js/commons.js" defer></script>
+  <script src="assets/js/demo.js" defer></script>
+
+  <!-- 구조화 데이터 -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebPage",
+      "name": "JH's Life Log",
+      "url": "https://yourdomain.com/",
+      "description": "주환의 개인 라이프 로그, 기록과 생각을 담는 공간"
+    }
+  </script>
+</head>
+
+  <body class="no-scroll-y">
+        <!-- Preloader -->
+        <section>
+            <div id="preloader">
+                <div id="ctn-preloader" class="ctn-preloader">
+                    <div class="animation-preloader">
+                        <div class="spinner"></div>
+                        <div><img alt=""  src="./assets/media/logo-light.png"></div>
+                    </div>	
+                    <div class="loader-section section-left"></div>
+                    <div class="loader-section section-right"></div>
+                </div>
+            </div>
+        </section>
     <!-- End Google Tag Manager (noscript)
         <div class="wrap">
             <section class="content">
@@ -52,9 +79,5 @@
                 </div>
             </section>
         </div> -->
-
-    <script src="assets/js/app-config.js" defer></script>
-    <script src="assets/js/commons.js" defer></script>
-    <script src="assets/js/demo.js" defer></script>
   </body>
 </html>
